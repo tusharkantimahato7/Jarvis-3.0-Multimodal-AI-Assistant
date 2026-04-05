@@ -98,6 +98,40 @@ cython_debug/
 node_modules/
 *.log
 *.sqlite3
+
+# 🔐 SECURITY: Additional sensitive files
+.env.local
+.env.*.local
+.env.production
+.env.staging
+.env.development
+secrets.json
+config/secrets.*
+api_keys.*
+credentials.*
+*.key
+*.pem
+private_key.pem
+certificate.pem
+
+# 🔐 SECURITY: API Keys and Tokens
+*_API_KEY*
+*_SECRET*
+*_TOKEN*
+*_PASSWORD*
+*_CREDENTIALS*
+
+# 🔐 SECURITY: Database and sensitive data
+*.db-journal
+*.db-wal
+*.db-shm
+data/*.db
+backups/*.db
+
+# 🔐 SECURITY: Local development secrets
+local_secrets.py
+dev_secrets.py
+test_secrets.py
 .abstra/
 .ruff_cache/
 .pypirc

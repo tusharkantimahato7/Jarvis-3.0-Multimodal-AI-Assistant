@@ -1,445 +1,351 @@
-# JARVIS 3.0 - Advanced AI Assistant
+# 🤖 JARVIS 3.0 - Multimodal AI Assistant
 
-A modern, feature-rich web interface for JARVIS, powered by Google's Gemini AI.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
+[![React 18+](https://img.shields.io/badge/react-18+-61dafb.svg)](https://reactjs.org/)
+[![Vite](https://img.shields.io/badge/Vite-5.x-646cff.svg)](https://vitejs.dev/)
+[![Built with Heart](https://img.shields.io/badge/built%20with-❤️-red.svg)](#)
 
-## Features
+A **powerful, modern AI assistant** powered by Google's Gemini API. Featuring a beautiful React web interface, desktop application support, and advanced multimodal capabilities.
 
-✨ **Modern UI/UX**
-- Beautiful, responsive design with dark/light theme toggle
+---
+
+## ✨ Features
+
+### 💬 **Smart Chat Interface**
+- Real-time messaging with Gemini AI
+- Message history and conversation persistence
+- Quick suggestion chips for common queries
+- Export conversations as text
+
+### 🎨 **Beautiful UI/UX**
+- Responsive design (desktop, tablet, mobile)
+- Dark/Light theme toggle
 - Smooth animations and transitions
-- Mobile-friendly interface
+- Modern, clean interface
 
-💬 **Advanced Chat Features**
-- Real-time messaging with typing indicators
-- Message history persistence
-- Quick suggestion chips
-- Export conversations
+### 🖥️ **Multi-Platform Support**
+- **Web**: Flask + React/Vite
+- **Desktop**: Tkinter-based application
+- **API**: RESTful endpoints for integration
 
-🎨 **Customization**
-- Theme switching (Dark/Light mode)
-- Settings panel
-- Customizable response settings
+### 🚀 **Advanced Features**
+- Gesture recognition (hand waves, poses)
+- Voice control support
+- Camera integration
+- Customizable settings panel
 
-🚀 **Performance**
-- Fast and responsive
-- Optimized for all screen sizes
-- Clean, maintainable code
+### ⚡ **Performance**
+- Fast response times
+- Optimized bundle size
+- Lazy loading
+- Progressive enhancement
 
-## Installation
+---
 
-1. **Clone or navigate to the project directory**
-   ```bash
-   cd JARVIS3.0
-   ```
+## 🏗️ Project Architecture
 
-2. **Install dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
+```
+JARVIS-3.0/
+├── frontend/                  # React + Vite (Web UI)
+│   ├── src/
+│   ├── public/
+│   └── package.json
+├── src/                       # Python backend
+│   └── jarvis/
+│       ├── api/              # Gemini API integration
+│       ├── web/              # Flask web app
+│       ├── desktop/          # Tkinter desktop UI
+│       ├── config/           # Configuration
+│       └── utils/            # Helper utilities
+├── docs/                      # Documentation
+├── tests/                     # Test suites
+├── requirements.txt           # Python dependencies
+├── CONTRIBUTING.md            # Contribution guide
+└── DEPLOYMENT.md              # Deployment guide
+```
 
-3. **Set up your API key**
-   Option 1: Environment variable (Recommended)
-   ```bash
-   # Windows
-   set GEMINI_API_KEY=your_api_key_here
-   # Linux/Mac
-   export GEMINI_API_KEY=your_api_key_here
-   ```
-   Option 2: Create a `.env` file
-   ```bash
-   cp .env.example .env
-   # Then edit .env and add your API key
-   ```
+---
 
-4. **Run the application (web)**
-   ```bash
-   set PYTHONPATH=%cd%\\src
-   python run_web.py
-   ```
+## 🛠️ Tech Stack
 
-5. **(Optional) Run the desktop app**
-   ```bash
-   set PYTHONPATH=%cd%\\src
-   python run_desktop.py
-   ```
+### Backend
+- **Python 3.9+** - Core language
+- **Flask 3.0** - Web framework
+- **Google Generative AI** - Gemini API integration
+- **Flask-CORS** - Cross-origin support
+- **Python-dotenv** - Environment configuration
 
-6. **Open your browser**
-   Navigate to `http://localhost:5000`
+### Frontend
+- **React 18** - UI library
+- **Vite 5** - Build tool (lightning fast ⚡)
+- **Modern CSS3** - Styling
+- **Responsive Design** - Mobile-first approach
 
-## Getting Your Gemini API Key
+### Desktop
+- **Tkinter** - GUI framework
+- **OpenCV** - Camera/gesture recognition
+- **MediaPipe** - Gesture detection
 
-1. Go to [Google AI Studio](https://makersuite.google.com/app/apikey)
+---
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Python 3.9 or higher
+- Node.js 16+ and npm
+- Git
+- Google Gemini API key ([Get it free here](https://makersuite.google.com/app/apikey))
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/tusharkantimahato7/Jarvis-3.0-Multimodal-AI-Assistant.git
+cd Jarvis-3.0-Multimodal-AI-Assistant
+```
+
+### 2️⃣ Get Your Gemini API Key
+
+1. Visit [Google AI Studio](https://makersuite.google.com/app/apikey)
 2. Sign in with your Google account
 3. Click "Create API Key"
-4. Copy the key and set it as described above
+4. Copy the key
 
-## Project Structure
-
-```
-JARVIS3.0/
-├── app.py                 # Web entry wrapper -> jarvis.web
-├── run_web.py             # Web runner (adds ./src to PYTHONPATH)
-├── run_desktop.py         # Desktop runner (adds ./src)
-├── requirements.txt
-├── src/
-│   └── jarvis/
-│       ├── api/           # Gemini + Flask API
-│       ├── config/        # Settings/env
-│       ├── desktop/       # Tkinter desktop app
-│       ├── utils/         # Shared helpers
-│       └── web/           # Flask app + assets
-│           ├── app.py
-│           ├── templates/
-│           └── static/
-├── react/                 # Future React/Vite UI scaffold
-└── README.md
-```
-
-## Usage
-
-1. Start the server using `python run_web.py` (after setting `PYTHONPATH` to `./src`)
-2. Open the web interface in your browser
-3. Type your message and press Enter or click Send
-4. Use suggestion chips for quick prompts
-5. Access settings via the sidebar
-6. Export conversations using the download button
-
-## Features in Detail
-
-### Chat Interface
-- Real-time messaging with Gemini AI
-- Message history automatically saved and restored
-- Typing indicators and quick suggestion chips
-
-### Customization
-- Dark/Light mode toggle
-- Settings panel for API key and preferences
-- Export chat transcripts
-
-### Responsive Design
-- Works on desktop, tablet, and mobile
-- Collapsible sidebar and touch-friendly controls
-
-## Troubleshooting
-
-**API Key Issues**
-- Ensure GEMINI_API_KEY is set
-- Verify key permissions and that it is active
-
-**Port Already in Use**
-- Change the port in `app.py`: `app.run(port=5001)`
-
-**Module Not Found**
-- Ensure all dependencies are installed: `pip install -r requirements.txt`
-
-## Future Enhancements
-
-- [ ] Voice input/output
-- [ ] File upload and analysis
-- [ ] Multi-language support
-- [ ] Conversation search
-- [ ] Custom AI model selection
-- [ ] Plugin system
-
-## License
-
-This project is open source and available for personal use.
-
-## Contributing
-
-Feel free to submit issues, fork the repository, and create pull requests for improvements.
-
-Made with love for AI enthusiasts
-
-
-<<<<<<< HEAD
-=======
-
-
----
-
-## 🚀 Features
-
-- 🎙️ **Voice Control:**  
-  Execute system commands and interact naturally using speech recognition.
-
-  🔒 ***Lock/Unlock System using Voice:***
-
-- ✋ **Gesture Recognition (via MediaPipe):**  
-  Control applications, volume, and playback with hand movements.
-
-- 📸 **Camera Feed Integration:**  
-  Real-time camera processing with motion feedback.
-
-- 🖥️ **GUI Interface:**  
-  Built with **Tkinter**, providing live camera feed, console logs, and interactive control buttons.
-
-- 💬 **Text-to-Speech (TTS):**  
-  Responses and alerts via `pyttsx3`.
-
-- 🧠 **Multithreading Support:**  
-  Smooth execution of multiple tasks (voice + motion + camera).
-
-  ----
-  ## requirements.txt
-  Flask==3.0.0
-flask-cors==4.0.0
-google-generativeai==0.3.2
-python-dotenv==1.0.0
-
----
-
-## 🧩 Tech Stack
-
-- **Language:** Python 3.12  
-- **Libraries Used:**
-  - `opencv-python`
-  - `numpy`
-  - `pyttsx3`
-  - `speechrecognition`
-  - `pyautogui`
-  - `pillow`
-  - `screeninfo`
-  - `keyboard`
-  - `pyaudio`
-  - `mediapipe` (for motion/gesture recognition)
-
----
-
-## ⚙️ Installation
-
-### 1️⃣ Prerequisites
-Make sure you have **Python 3.12** installed.  
-If not, you can install it from:  
-👉 [https://www.python.org/downloads/release/python-3120/](https://www.python.org/downloads/release/python-3120/)
-
----
-
-### 2️⃣ Clone the Repository
+### 3️⃣ Backend Setup
 
 ```bash
-git clone https://github.com/<tusharkantimahato>/Jarvis3.0.git
-cd Jarvis3.0
+# Create virtual environment
+python -m venv venv
 
+# Activate it
+venv\Scripts\activate      # Windows
+source venv/bin/activate   # Mac/Linux
 
-3️⃣ Install Dependencies
-py -3.12 -m pip install opencv-python numpy pyttsx3 speechrecognition pyautogui pillow screeninfo keyboard pyaudio --quiet
+# Install dependencies
+pip install -r requirements.txt
 
-If you want motion control (hand gestures):
-py -3.12 -m pip install mediapipe
+# Set API key (Windows)
+set GEMINI_API_KEY=your_api_key_here
 
-
-⚠️ Note: mediapipe may not be available for Python 3.13.
-Use Python 3.11 or 3.12 for full motion-control features.
-
-
-🧠 Running the Project
-py -3.12 main.py
-
-Once launched, the GUI will appear with:
-
-
-Buttons for Voice, Motion, and Camera Control
-
-
-A console window for real-time Jarvis responses
-
-
-Live camera feed for motion tracking
-
-
-
-🗣️ Voice Commands
-Some example commands:
-
-
-“Start camera”
-
-
-“Stop camera”
-
-
-“Take picture”
-
-
-“Volume up” / “Volume down”
-
-
-“Open notepad”
-
-
-“What is the time?”
-
-
-“Hello Jarvis”
-
-
-
-✋ Gesture Controls
-GestureAction👍 Thumbs DownVolume Down✋ Open PalmPlay/Pause Media☝️ Pointing Up(Reserved for custom actions)
-
-# JARVIS 3.0 - Project Structure
-
-This document describes the organized file and folder structure of the JARVIS 3.0 project.
-
-## 📁 Directory Structure
-JARVIS3.0/
-├── src/                          # Source code directory
-│   ├── api/                      # API and Backend modules
-│   │   ├── __init__.py
-│   │   ├── gemini_client.py      # Gemini AI client wrapper
-│   │   ├── routes.py             # Flask API routes
-│   │   ├── cli.py                # Command-line interface
-│   │   └── new_api.py            # Alternative API implementation
-│   │
-│   ├── desktop/                  # Desktop application (Tkinter)
-│   │   ├── __init__.py
-│   │   ├── app.py                # Main desktop application
-│   │   ├── command_processor.py  # Command processing logic
-│   │   │
-│   │   ├── gui/                  # GUI components
-│   │   │   ├── __init__.py
-│   │   │   └── components.py    # Reusable GUI widgets
-│   │   │
-│   │   ├── voice/                # Voice control module
-│   │   │   ├── __init__.py
-│   │   │   └── voice_controller.py  # Voice recognition & TTS
-│   │   │
-│   │   ├── motion/               # Motion control module
-│   │   │   ├── __init__.py
-│   │   │   └── gesture_recognizer.py  # Hand gesture recognition
-│   │   │
-│   │   └── camera/               # Camera control module
-│   │       ├── __init__.py
-│   │       └── camera_controller.py   # Camera operations
-│   │
-│   └── utils/                    # Utility functions
-│       ├── __init__.py
-│       └── helpers.py            # Helper functions
-│
-├── web/                          # Web application
-│   ├── app.py                    # Flask web app entry point
-│   ├── templates/                # HTML templates
-│   │   └── index.html
-│   └── static/                   # Static files
-│       ├── css/
-│       │   └── style.css
-│       └── js/
-│           └── app.js
-│
-├── config/                       # Configuration files
-│   ├── __init__.py
-│   └── settings.py              # Application settings
-│
-├── tests/                        # Test files
-│   └── __init__.py
-│
-├── run_desktop.py                # Run desktop application
-├── run_web.py                    # Run web application
-├── requirements.txt              # Python dependencies
-├── README.md                     # Project documentation
-└── PROJECT_STRUCTURE.md          # This file
+# Set API key (Mac/Linux)
+export GEMINI_API_KEY=your_api_key_here
 ```
 
-## 🚀 Running the Applications
+### 4️⃣ Frontend Setup
 
-### Desktop Application
 ```bash
+cd frontend
+npm install
+```
+
+### 5️⃣ Run the Application
+
+#### Option A: Web Interface (Recommended)
+```bash
+# Terminal 1 - Backend
+set PYTHONPATH=%cd%\src
+python run_web.py
+
+# Terminal 2 - Frontend
+cd frontend
+npm run dev
+```
+Then open: **http://localhost:5173**
+
+#### Option B: Use Flask Only
+```bash
+set PYTHONPATH=%cd%\src
+python run_web.py
+```
+Then open: **http://localhost:5000**
+
+#### Option C: Desktop Application
+```bash
+set PYTHONPATH=%cd%\src
 python run_desktop.py
 ```
 
-### Web Application
+---
+
+## 📖 Usage Examples
+
+### Chat with JARVIS
+
+```python
+# Via Web UI
+# Simply type your message and hit send!
+
+# Via CLI (if API supports it)
+set PYTHONPATH=%cd%\src
+python -m jarvis.api.cli
+```
+
+### API Integration
+
 ```bash
+# Start the server
 python run_web.py
+
+# Make requests
+curl -X POST http://localhost:5000/api/chat \
+  -H "Content-Type: application/json" \
+  -d '{"message": "Hello JARVIS"}'
 ```
-
-### CLI API Interface
-```bash
-python -m src.api.cli
-```
-
-## 📦 Module Descriptions
-
-### `src/api/`
-Contains all API-related code:
-- **gemini_client.py**: Handles Gemini AI integration
-- **routes.py**: Flask API endpoints
-- **cli.py**: Command-line interface for testing
-
-### `src/desktop/`
-Desktop application modules:
-- **app.py**: Main application class and GUI setup
-- **command_processor.py**: Processes voice and gesture commands
-- **gui/**: Reusable GUI components
-- **voice/**: Voice recognition and text-to-speech
-- **motion/**: Hand gesture recognition using MediaPipe
-- **camera/**: Camera capture and processing
-
-### `src/utils/`
-Shared utility functions used across modules
-
-### `web/`
-Flask web application:
-- **app.py**: Flask app initialization and routes
-- **templates/**: HTML templates
-- **static/**: CSS and JavaScript files
-
-### `config/`
-Configuration management:
-- **settings.py**: Centralized settings loaded from environment variables
-
-## 🔧 Configuration
-
-All configuration is managed through `config/settings.py` and environment variables:
-- `GEMINI_API_KEY`: Your Gemini API key
-- `FLASK_HOST`: Flask server host (default: 0.0.0.0)
-- `FLASK_PORT`: Flask server port (default: 5000)
-
-## 📝 Code Organization Principles
-
-1. **Separation of Concerns**: Each module has a single responsibility
-2. **Modularity**: Code is split into logical, reusable modules
-3. **Configuration Management**: Centralized configuration in `config/`
-4. **Entry Points**: Clear entry points for each application mode
-5. **Reusability**: Shared utilities and components
-
-## 🔄 Migration from Old Structure
-
-The old files (`app.py`, `main.py`, `.api/new_api.py`) are still present but the new structure uses:
-- `web/app.py` instead of `app.py`
-- `src/desktop/app.py` instead of `main.py`
-- `src/api/new_api.py` instead of `.api/new_api.py`
-
-You can gradually migrate to the new structure or keep both for compatibility.
-
-🧑‍💻 Author
-**Tushar Kanti Mahato**
-🔹 GitHub: @tusharkantimahato  
-🔹 Project: Jarvis 3.0 – Multimodal Assistant
-🔹 Version: v3.0
-🔹 Python Runtime: py -3.12
-
-💡 Notes
-
-
-Tested on Windows 10/11
-
-
-Ensure microphone and camera permissions are granted
-
-
-Best experience on Python 3.12 with MediaPipe installed
-
-
-
-“Jarvis is always ready to assist you — by your voice or motion.”
-
-## 📅 Future Improvements / Update Plan
-
-Jarvis 3.0 is an evolving AI assistant — future updates will focus on performance, stability, and feature enhancement.
-If any errors, bugs, or mistakes occur in the current version, they will be corrected and optimized in upcoming releases.
 
 ---
 
-⭐ If you like this project, please give it a star — it helps support future updates!
-We hope you enjoy using Jarvis 3.0!
+## 🎬 Screenshots
+
+### Web Interface
+![JARVIS Web UI](docs/screenshots/web-ui.png)
+
+### Dark Mode
+![Dark Mode](docs/screenshots/dark-mode.png)
+
+### Desktop Application  
+![Desktop App](docs/screenshots/desktop-app.png)
+
+*Screenshots coming soon! Help us add them by contributing.*
+
+---
+
+## 📚 Documentation
+
+- **[Contributing Guide](CONTRIBUTING.md)** - How to contribute
+- **[Deployment Guide](DEPLOYMENT.md)** - Deploy to Heroku, Railway, AWS
+- **[API Documentation](docs/API.md)** - RESTful API reference
+- **[Architecture Guide](docs/ARCHITECTURE.md)** - System design details
+
+---
+
+## 🔧 Configuration
+
+### Environment Variables
+
+Create a `.env` file in the root directory:
+
+```env
+# Gemini API
+GEMINI_API_KEY=your_api_key_here
+GEMINI_MODEL=gemini-pro
+
+# Flask Settings
+FLASK_ENV=development
+FLASK_DEBUG=True
+FLASK_HOST=0.0.0.0
+FLASK_PORT=5000
+
+# CORS Origins (comma-separated)
+CORS_ORIGINS=http://localhost:5173,http://localhost:5000
+```
+
+### Settings File
+
+Configuration is centralized in `src/jarvis/config/settings.py`:
+
+```python
+# Customize API model, timeouts, etc.
+```
+
+---
+
+## 🚀 Deployment
+
+### Deploy Frontend to GitHub Pages (Automatic)
+✅ Automatic deployment via GitHub Actions on every push to `main`
+
+### Deploy Backend
+
+- **Heroku**: Free tier available, see [DEPLOYMENT.md](DEPLOYMENT.md)
+- **Railway.app**: Simple GitHub integration
+- **Render.com**: Easy deployment
+- **AWS/DigitalOcean**: Production-grade
+
+See [DEPLOYMENT.md](DEPLOYMENT.md) for step-by-step guides.
+
+---
+
+## 🗺️ Roadmap
+
+### v3.1 (Q2 2026)
+- [ ] Voice input/output via Web Speech API
+- [ ] Image recognition capabilities
+- [ ] Conversation memory with vector embeddings
+- [ ] Plugin system for custom integrations
+
+### v3.2 (Q3 2026)
+- [ ] Real-time collaboration (multiple users)
+- [ ] Advanced analytics dashboard
+- [ ] Mobile app (React Native)
+- [ ] Custom model fine-tuning
+
+### v4.0 (2026+)
+- [ ] Autonomous agent mode
+- [ ] Integration with productivity tools (Slack, Teams)
+- [ ] Local model support (Ollama, LLaMA)
+- [ ] Video streaming support
+
+---
+
+## 🤝 Contributing
+
+We ❤️ contributions! Whether it's:
+- 🐛 **Bug fixes**
+- ✨ **New features**
+- 📚 **Documentation improvements**
+- 🎨 **UI/UX enhancements**
+- 🚀 **Performance optimizations**
+
+Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+### Quick Contribution Steps
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit changes (`git commit -m "feat: add amazing feature"`)
+4. Push to your fork (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+---
+
+## 📝 License
+
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 💡 Acknowledgments
+
+- **Google Gemini API** - Powering the AI
+- **React & Vite communities** - Frontend tooling
+- **Flask team** - Backend framework
+- **All contributors** - Making JARVIS better!
+
+---
+
+## 📞 Support & Community
+
+- **Issues**: [GitHub Issues](https://github.com/tusharkantimahato7/Jarvis-3.0/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/tusharkantimahato7/Jarvis-3.0/discussions)
+- **Email**: tushargkd230@gmail.com
+- **Twitter**: [tusharkmahato7](https://twitter.com/)
+
+---
+
+## ⭐ Show Your Support
+
+If JARVIS helped you, please consider:
+- ⭐ Giving it a **star** on GitHub
+- 🔗 Sharing it with friends/colleagues
+- 💬 Leaving feedback in Issues/Discussions
+- 🤝 Contributing code or documentation
+
+---
+
+<div align="center">
+
+**Made with ❤️ by the JARVIS community**
+
+[⬆ Back to top](#-jarvis-30---multimodal-ai-assistant)
+
+</div>

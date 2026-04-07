@@ -17,7 +17,7 @@ JARVIS 3.0 is a multimodal AI assistant with both web and desktop interfaces, po
 
 ```bash
 # Clone repository
-git clone https://github.com/YOUR_USERNAME/Jarvis-3.0-Multimodal-AI-Assistant.git
+git clone https://github.com/tusharkantimahato7/Jarvis-3.0-Multimodal-AI-Assistant.git
 cd Jarvis-3.0-Multimodal-AI-Assistant
 
 # Setup environment
@@ -281,7 +281,7 @@ npm run build
 npm run deploy
 ```
 
-- **Deployed at:** `https://YOUR_USERNAME.github.io/Jarvis-3.0-Multimodal-AI-Assistant/`
+- **Deployed at:** `https://tusharkantimahato7.github.io/Jarvis-3.0-Multimodal-AI-Assistant/`
 - **Configuration:** `.github/workflows/deploy.yml`
 
 ---
@@ -431,7 +431,7 @@ This project is licensed under the MIT License - see [LICENSE](LICENSE) file.
 
 ## 🔗 Links
 
-- [GitHub Repository](https://github.com/YOUR_USERNAME/Jarvis-3.0-Multimodal-AI-Assistant)
+- [GitHub Repository](https://github.com/tusharkantimahato7/Jarvis-3.0-Multimodal-AI-Assistant)
 - [Documentation](README.md)
 - [Security Guide](SECURITY.md)
 - [API Docs](#api-documentation)

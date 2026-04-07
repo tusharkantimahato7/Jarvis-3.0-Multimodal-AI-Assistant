@@ -10,7 +10,7 @@ Be respectful, inclusive, and professional in all interactions.
 
 ### Fork & Clone
 ```bash
-git clone https://github.com/YOUR_USERNAME/Jarvis-3.0-Multimodal-AI-Assistant.git
+git clone https://github.com/tusharkantimahato7/Jarvis-3.0-Multimodal-AI-Assistant.git
 cd Jarvis-3.0-Multimodal-AI-Assistant
 ```
 

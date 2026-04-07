@@ -83,8 +83,8 @@
 Add to top of README:
 
 ```markdown
-![GitHub stars](https://img.shields.io/github/stars/yourusername/Jarvis-3.0-Multimodal-AI-Assistant?style=social)
-![GitHub forks](https://img.shields.io/github/forks/yourusername/Jarvis-3.0-Multimodal-AI-Assistant?style=social)
+![GitHub stars](https://img.shields.io/github/stars/tusharkantimahato7/Jarvis-3.0-Multimodal-AI-Assistant?style=social)
+![GitHub forks](https://img.shields.io/github/forks/tusharkantimahato7/Jarvis-3.0-Multimodal-AI-Assistant?style=social)
 ![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)

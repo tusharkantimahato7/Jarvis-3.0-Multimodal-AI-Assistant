@@ -288,7 +288,7 @@ The API accepts requests from:
 
 - **Issues:** Open a GitHub issue
 - **Discussions:** GitHub Discussions
-- **Email:** support@jarvis.example.com
+- **Email:** tushargkd230@gmail.com
 
 ---
 

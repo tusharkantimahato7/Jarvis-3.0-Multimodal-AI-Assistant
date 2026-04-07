@@ -201,7 +201,7 @@ POST /api/chat
 - **Static hosting** on GitHub Pages
 - **Automatic deployment** via GitHub Actions  
 - **CDN delivery** for fast access globally
-- **URL:** `https://username.github.io/Jarvis-3.0/`
+- **URL:** `https://tusharkantimahato7.github.io/Jarvis-3.0/`
 
 ### Backend (Multiple Options)
 - **Development:** Local Flask server

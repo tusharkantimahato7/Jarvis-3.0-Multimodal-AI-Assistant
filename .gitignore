@@ -99,6 +99,15 @@ node_modules/
 *.log
 *.sqlite3
 
+# Frontend (React + Vite)
+frontend/node_modules/
+frontend/dist/
+frontend/.cache/
+
+# Build outputs
+/dist
+/build
+
 # 🔐 SECURITY: Additional sensitive files
 .env.local
 .env.*.local

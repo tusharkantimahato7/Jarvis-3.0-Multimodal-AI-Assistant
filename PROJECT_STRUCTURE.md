@@ -5,26 +5,32 @@ All source now lives under the `jarvis` package inside `src/`, with web assets b
 ## 📁 Directory Structure
 
 ```
-JARVIS3.0/
-├── app.py                  # Web entry wrapper -> jarvis.web.app
-├── run_web.py              # Launch Flask app (adds ./src to PYTHONPATH)
-├── run_desktop.py          # Launch Tkinter desktop app (adds ./src)
-├── requirements.txt
-├── README.md
-├── PROJECT_STRUCTURE.md    # This file
+JARVIS-3.0/
+├── .venv/                    ✅ Virtual environment active
+├── frontend/
+│   ├── src/                  ✅ React source (CREATED)
+│   │   ├── main.jsx          ✅ Entry point
+│   │   ├── App.jsx           ✅ Main component
+│   │   ├── App.css
+│   │   └── index.css
+│   ├── index.html            ✅ HTML template
+│   ├── public/               ✅ Static assets
+│   ├── package.json          ✅ Updated with React/Vite
+│   ├── vite.config.js        ✅ Configured for port 5000 proxy
+│   └── node_modules/         ✅ 227 packages installed
 ├── src/
 │   └── jarvis/
-│       ├── __init__.py
-│       ├── api/            # API + Gemini integration
-│       ├── config/         # Settings + env loading
-│       ├── desktop/        # Desktop UI + controllers
-│       ├── utils/          # Shared helpers
-│       └── web/            # Flask web app + assets
-│           ├── app.py
-│           ├── templates/  # index.html
-│           └── static/     # css/, js/
-└── tests/
-    └── __init__.py
+│       ├── api/              ✅ Gemini API integration
+│       ├── web/              ✅ Flask web app
+│       ├── desktop/          ✅ Tkinter desktop UI
+│       └── config/           ✅ Settings
+├── requirements.txt          ✅ Updated (48 packages)
+├── run_web.py               ✅ Starts Flask
+├── run_desktop.py           ✅ Starts Tkinter app
+├── app.py                   ✅ Flask alt entry point
+├── .env                     ⚠️  Needs GEMINI_API_KEY
+├── .env.example             ✅ Template
+└── .gitignore              ✅ Updated
 ```
 
 ## 🚀 Running the Applications
